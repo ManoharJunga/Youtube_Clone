@@ -1,5 +1,5 @@
 import mongoose, {Schema, model} from "mongoose";
-
+import jwt from "jsonwebtoken";
 const userSchema = new Schema({
     username: {
         type: String,
@@ -45,6 +45,6 @@ const userSchema = new Schema({
     }
 
 }, {timestamps: true});
-
+ 
 
 export const User = mongoose.model('User', userSchema);
